@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: taxi_db
+    restart: unless-stopped
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: "taxi_db"
+      POSTGRES_USER: "taxi_db_user"
+      POSTGRES_PASSWORD: "taxi_db_password"
